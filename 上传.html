@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #text{width:400px;height:300px;background: pink;color:#000;}
+    </style>
+</head>
+<body>
+<form action="note.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="picture" />
+    <input type="submit" name="submit"/>
+</form>
+<select id="select">
+    <option value="">please choose one</option>
+    <option value="1">no 1</option>
+    <option value="2">no 2</option>
+    <option value="3">no 3</option>
+    <option value="4">no 4</option>
+    <option value="5">no 5</option>
+    <option value="6">no 6</option>
+</select>
+<div id="text"></div>
+<script>
+    document.getElementById('select').onchange = function () {
+        console.log(this.value);
+        str = this.value;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                document.getElementById("text").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","gethint.php?q="+str,true);
+        xmlhttp.send();
+    }
+</script>
+</body>
+</html>
