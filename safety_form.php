@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
         var i = null;
         var t = null;
         while(m){
-            i = Math.round(Math.random()*m--);
+            i = Math.floor(Math.random()*m--);
             t = arr[m];
             arr[m] = arr[i];
             arr[i] = t;
