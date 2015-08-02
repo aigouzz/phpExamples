@@ -7,5 +7,5 @@ var uglify = require('gulp-uglify');
 gulp.task('default', function () {
     gulp.src('t.php')
         .pipe(uglify)
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest('/'));
 });
