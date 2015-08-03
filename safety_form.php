@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
     <input type="submit" name="submit" value="submit!" />
 </form>
 <script>
-    function shuffle(arr){
+    /*function shuffle(arr){
         var m = arr.length;
         var i = null;
         var t = null;
@@ -48,5 +48,19 @@ if(isset($_POST['submit'])){
         return arr.sort(function () {
             return Math.random() - 0.5;
         });
+    }*/
+    function shuffle(arr){
+        var array = [];
+        var m = arr.length,i = null;
+        while(m){
+            i = Math.round(Math.random()*m--);
+            array.push(arr[i]);
+            arr.splice(i,1);
+            console.log(arr);
+        }
+        return array;
     }
+    var arr = [1,2,3,4,5,6,7,8,9,10];
+    var n = shuffle(arr);
+    console.log(n);
 </script>
