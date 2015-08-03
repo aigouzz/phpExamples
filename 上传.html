@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-<form action="note.php" method="POST" enctype="multipart/form-data">
+<form action="upload.php" method="POST" enctype="multipart/form-data">
     <input type="file" name="picture" />
     <input type="submit" name="submit"/>
 </form>
@@ -24,7 +24,6 @@
 <div id="text"></div>
 <script>
     document.getElementById('select').onchange = function () {
-        console.log(this.value);
         str = this.value;
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
