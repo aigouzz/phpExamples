@@ -17,6 +17,7 @@ date_default_timezone_set("Asia/Shanghai");
 $time = time();
 $mktime = mktime(12,05,16,8,1,2015);
 echo date('Y-m-d h:i:sa',$time).'/'.'make time:'.date("m d,Y h:i:sa",$mktime);
+?>
 
 
 
