@@ -71,7 +71,7 @@ function sortHill($arr){
     }
     while($h>=1) {
         for ($i = 0; $i < $n; $i++) {
-            for ($j = $i; $j > 0; $j -= $h) {
+            for ($j = $i; $j > $h; $j -= $h) {
                 if ($arr[$j] < $arr[$j - $h]) {
                     switchOrder($arr, $j, $j - $h);
                 } else {
@@ -82,5 +82,14 @@ function sortHill($arr){
         $h = $h/3;
     }
 }
+
+?>
+<?php
+//dijkstra算法：最短路径问题
+//floyd算法：最短路径
+
+
+
+
 
 
