@@ -5,7 +5,7 @@
  * Date: 15/8/4
  * Time: 上午11:12
  */
-function binary_search($arr,$low,$high,$target){
+/*function binary_search($arr,$low,$high,$target){
     $mid = intval(($low+$high)/2);
     if($arr[$mid] == $target){
         return $mid;
@@ -32,15 +32,34 @@ function binarySearch($arr,$k){
         }
     }
     return -1;
-}
+}*/
 //数组必须先排序在查找
 
+//选择排序：从第一个元素开始找到最小的与第一个交换，在剩下的元素中寻找到最小与第二个交换，recursive
+//插入排序：
+/*function switchOrder($arr,$j,$m){
+    $n = $arr[$j];
+    $arr[$j] = $arr[$m];
+    $arr[$m] = $n;
+}
+function  sort($arr){
+    $n = count($arr);
+    for($i = 0;$i<$n;$i++){
+        for($j = $i;$j >0;$j--){
+            if($arr[$j] < $arr[$j-1]){
+                switchOrder($arr,$j,$j-1);
+            }else{
+                break;
+            }
+        }
+    }
+}*/
 
 
+$arr = [1,4,5,8,12,3,63,21,42,33,28,1,5,7];
 
-
-
-
+/*sort($arr);*/
+echo $arr;
 
 
 
