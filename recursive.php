@@ -86,9 +86,11 @@ function sortHill($arr){
 ?>
 <?php
 //dijkstra算法：最短路径问题
-//floyd算法：最短路径
+//floyd算法：最短路径  多源最短路径
 
+public class Floyd{
 
+}
 
 
 
