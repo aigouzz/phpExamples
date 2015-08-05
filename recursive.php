@@ -89,7 +89,11 @@ function sortHill($arr){
 //floyd算法：最短路径  多源最短路径
 
 public class Floyd{
+    private $id = 0;
+    private $name = 'leo';
+    function __construct($name,$id){
 
+    }
 }
 
 

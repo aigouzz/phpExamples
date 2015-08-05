@@ -558,10 +558,28 @@ echo greet;
  * 2：堆：malloc()  free()     new  delete=>c++   易产生内存泄露  非连续地址，向高地址扩展，链表存储空闲内存地址 由低到高
  * 堆：频繁malloc free产生大量碎片，使效率低下  栈是连续的
  * 堆：效率比栈低
- *
+ * efficiency lower
  *
  *
  * */
+#include <stdio.h>
+#include <malloc.h>
+#include <ininstd.h>
+#include <alloca.h>
+#define SHW_ADR(id,i){printf('the %s address is %d ',id,&i);}
+
+
+
+function bare(){
+    $m = array('name','age','id');
+    foreach($m as $value){
+        echo 'the value of arr is:'.$value;
+    }
+}
+
+
+
+
 
 
 
