@@ -530,4 +530,14 @@ define('greet','hello,everyone!',true);//true,不区分大小写
 echo greet;
 ?>
 
+<?php
+/* linux：text segment代码区     全局初始化数据区：data segment      未初始化数据区：bss    栈区：stack 编译器自动分配释放
+ * 堆区：heap  动态内存分配  一般有程序员分配释放  没有就os分配释放
+ *
+ *
+ * */
+
+
+
+
 
