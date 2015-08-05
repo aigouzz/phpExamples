@@ -533,10 +533,22 @@ echo greet;
 <?php
 /* linux：text segment代码区     全局初始化数据区：data segment      未初始化数据区：bss    栈区：stack 编译器自动分配释放
  * 堆区：heap  动态内存分配  一般有程序员分配释放  没有就os分配释放
+ * 全局变量静态变量只能被初始化一次
+ * 函数：存储类型仅仅标志函数作用域 默认extern   全局
+ *
+ * */
+/* 变量：存储类型 类型修饰符 数据类型 变量名
+ * char double int float *    struct enum typedef union
+ * 类型修饰符：long short signed unsigned void const volatile
+ * 存储类型：auto extern register static
+ *
+ * 函数：存储类型 返回数据类型 函数名（参数列表）
+ * auto:一般标示变量，存储在进程栈中，对于局部变量，默认auto
+ * extern：全局变量，全局函数
+ *
  *
  *
  * */
-
 
 
 
