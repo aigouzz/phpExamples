@@ -610,11 +610,18 @@ function bare(){
  * 没有对可能出现的多余目的空间进行处理
  * memmove(void* dest,void* src,size);//复制前，先检查源地址和目的地址是否重合，重合先处理，没有重合就直接复制
  * memset(void* s,int c,size);//把从s开始后面n位值改为c，返回s首地址
- *
- *
+ * memchr(void *s,int c,size);//一段内存空间中查找某个字符位置第一次出现的位置 s位置开始在size位内查找c
+ * memcmp(void *s1,void *s2,size);//比较内存单元前n个字节是否相等，=返回0，s1《s2 =-1  ，s1》s2==1
  *
  * */
-
+/* valgrind:内存管理工具
+ * 命令行参数识别：getopt();//单个字符-》冒号     ‘i:’：标示其后必须接个参数，参数紧跟在选项后或者以空格格开，该参数指针赋给optarg
+ *     ‘i::’：标示该选项后可以跟一个参数，参数必须紧随其后或者空个空格，该参数指针赋给optarg
+ * getopt(int argc,char *argv,const *shortopts);//返回第一个选项，设置下列全局变量：optarg 指向当前选项参数的指针
+ *    optind：再次调用getopt();的下一个argv指针的索引
+ *    optopt：存储不可知或错误选项
+ *
+ * */
 
 
 
