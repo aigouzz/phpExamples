@@ -605,8 +605,19 @@ function bare(){
 /* calloc();//优点是把动态分配的内存初始化为0
  * calloc(count,sizeof(strunt data));//
  *
+ * */
+/*memcpy(void* dest,void* src,size);//n个字节从src指向复制到dest指向，执行成功返回目的地址
+ * 没有对可能出现的多余目的空间进行处理
+ * memmove(void* dest,void* src,size);//复制前，先检查源地址和目的地址是否重合，重合先处理，没有重合就直接复制
+ * memset(void* s,int c,size);//把从s开始后面n位值改为c，返回s首地址
+ *
+ *
  *
  * */
+
+
+
+
 
 
 
