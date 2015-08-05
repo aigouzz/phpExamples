@@ -589,12 +589,24 @@ function bare(){
  * 调用free释放内存后不能在访问被释放的内存空间，可指针置为空
  * 不能两次释放相同的指针
  * malloc free配套使用，不需要的内存空间都需要释放回收
+ * */
+
+/* c程序讲解：
+ * stdio.h  调用printf（）函数
+ * stdlib.h 调用malloc（）函数的头文件
+ * int main(int argc,char* argv[],char* envp[]){} argc参数个数  argv参数列表 envp所有环境变量
+ *
+ * ralloc();//用来更改已经配置的内存空间
+ * realloc(void *_ptr,size);//若当前内存段后有足够的空间就直接扩展，返回原指针
+ * 若当前指针后空间不够，使用堆中第一个能满足要求的内存块，将数据移入，释放原空间，返回新内存块位置
+ * 若申请失败，返回null，原指针仍然有效
+ *
+ * */
+/* calloc();//优点是把动态分配的内存初始化为0
+ * calloc(count,sizeof(strunt data));//
  *
  *
  * */
-
-
-
 
 
 
