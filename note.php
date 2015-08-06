@@ -529,6 +529,15 @@ fclose($filename);
 define('greet','hello,everyone!',true);//true,不区分大小写
 echo greet;
 ?>
+<?php
+/*mysql:复制，查询缓存，全文索引和搜索，企业级sql特性，安全
+ *
+ *
+ * */
+
+
+?>
+
 
 <?php
 /* linux：text segment代码区     全局初始化数据区：data segment      未初始化数据区：bss    栈区：stack 编译器自动分配释放
