@@ -531,6 +531,10 @@ echo greet;
 ?>
 <?php
 /*mysql:复制，查询缓存，全文索引和搜索，企业级sql特性，安全
+ * status:查看mysql的详细信息
+ * show tables：查看表
+ * show variables:系统变量
+ *
  *
  *
  * */
@@ -664,6 +668,11 @@ function bare(){
  *
  * ANSI C文件i/o操作：
  * 打开文件：fopen(char *filename,modes);//r：只读 文件必须存在，不存在就返回错误   w：只写 不存在就创建新的 +也一样  r+,w+:读写
+ *
+ *
+ * */
+/* linux:
+ *
  *
  *
  * */
