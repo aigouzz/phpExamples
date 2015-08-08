@@ -7,10 +7,10 @@
  */
 $q = $_GET['q'];
 if($q != ''){
-    $servername = '127.0.0.1';
+    $servername = 'localhost';
     $username = 'root';
-    $password = '';
-    $dbname = 'my_db';
+    $password = '123456';
+    $dbname = 'mysql';
     $con = new mysqli($servername,$username,$password,$dbname);
     if($con->connect_error){
         die('mysql error:'.$con->connect_errno);

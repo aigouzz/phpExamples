@@ -536,6 +536,13 @@ echo greet;
  * show variables:系统变量
  * /etc/my.cnf:全局配置文件
  *
+ * //有用的mysql命令：
+ * show databases
+ * show tables
+ * use my_db
+ * describe host;//查看表结构
+ * //unix区分大小写
+ *
  *
  * */
 
