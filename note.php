@@ -534,7 +534,7 @@ echo greet;
  * status:查看mysql的详细信息
  * show tables：查看表
  * show variables:系统变量
- *
+ * /etc/my.cnf:全局配置文件
  *
  *
  * */
