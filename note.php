@@ -590,7 +590,20 @@ echo greet;
  *          FLOAT([M,D])[UNSIGNED][ZEROFILL]:单精度浮点数
  *          FLOAT(precision)[UNSIGNED][ZEROFILL]:精度对于单精度可以使1-24，对于双精度为25-53
  *     字符串：
- *
+ *          CHAR(length)[BINARY | ASCII  | UNIQUE]:固定长度字符串表示形式，支持最大255个字符
+ *          [NATIONAL]VARCHAR(LENGTH)[BINARY]:可变长度字符串，0-65535
+ *          LONGBLOB:最大的二进制字符串表示形式
+ *          LONGTEXT:最大的非二进制字符串标示形式
+ *          MEDIUMBLOB:第二大二进制字符串表示形式
+ *          MEDIUMTEXT:第二大非二进制字符串标示形式
+ *          BLOB:第三大
+ *          TEXT:第三大    都是0-65535
+ *          TINYBLOB:最小二进制字符串表示形式，0-255
+ *          TINYTEXT:最小非二进制字符串标示形式 0-255
+ *          ENUM('member1'..):最多存储一组预定义的值中某一个成员提供了一种方法
+ *          SET('member1'。。):为指定的一组预定义的值中0或多个值提供了一种方法
+ *      数据类型属性：
+ *          AUTO_INCREMENT:去除了许多数据库驱动的应用程序中必要的一层逻辑：它能为新插入的行附一个唯一的整数标识符    用于作为主键的列，每个表只允许一个
  * */
 
 ?>
