@@ -614,10 +614,32 @@ echo greet;
  *              UNIQUE:确保所有值都不相同，只有null值可以重复
  *              ZEROFILL:可用于任何数值类型，用0填充所有剩余字段空间    默认字段宽度为6：000001
  *      处理数据库和表：
- *  * */
+ *          SHOW DATABASES;
+ *          create database my_db;
+ *          use my_db;
+ *          DROP DATABASE my_db;
+ *
+ *          CREATE TABLE Persons(id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,firstname VARCHAR(25) NOT NULL,lastname VARCHAR(25) NOT NULL,email VARCHAR(45) NOT NULL,phone VARCHAR(10) NOT NULL);
+ *          //database_name.table_name;
+ *          CREATE TABLE IF NOT EXISTS my_db();//条件创建
+ *          CREATE TABLE my_db1 select * from my_db;//复制表
+ *          CREATE TEMPORARY TABLE my_db2 select firstname,lastname from my_db;//创建一个临时表，针对这个临时表进行查询，和当前会话生命周期一样长
+ *          DESCRIBE Persons;//查看表结构
+ *          SHOW columns IN Persons;
+ *          DROP [TEMPORARY] TABLE [IF EXISTS] TABLE_NAME [,TABLE_NAME];//删除表，可以多个
+ *          修改表结构：
+ *          ALTER TABLE my_db ADD COLUMN birthday DATE;//添加列生日
+ *          ALTER TABLE my_db ADD COLUMN birthday DATE AFTER firstname;//在firstname之后
+ *          ALTER TABLE my_db CHANGE birthday birthday DATE NOT NULL;//改变某一列得属性
+ *
+ *
+ *
+ *
+ *
+ *
+ **/
 
 ?>
-
 
 
 <!-- *************************************************************************   linux    *******************************************************************************************-->
