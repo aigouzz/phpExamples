@@ -650,7 +650,10 @@ echo greet;
 #include <ininstd.h>
 #include <alloca.h>
 #define SHW_ADR(id,i){printf('the %s address is %d ',id,&i);}
-
+/* p,&i都是变量i的地址，*p，i都是变量i的值
+ *
+ *
+ * */
 
 
 function bare(){
