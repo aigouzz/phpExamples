@@ -631,6 +631,25 @@ echo greet;
  *          ALTER TABLE my_db ADD COLUMN birthday DATE;//添加列生日
  *          ALTER TABLE my_db ADD COLUMN birthday DATE AFTER firstname;//在firstname之后
  *          ALTER TABLE my_db CHANGE birthday birthday DATE NOT NULL;//改变某一列得属性
+ *          ALTER TABLE my_db DROP birthday;//删除某一列
+ *
+ *          show：mysql内置特性，不是标准的数据库特性
+ *          INFORMATION_SCHEMA;//标准sql支持，了解数据库和各种服务器设置，28个表，帮助了解安装环境几乎所有方面
+ *           CHARACTER_SETS;//存储关于可用字符集的2信息
+ *           COLLATIONS;//字符集校正的信息
+ *           COLLATIONS_CHARACTER_SET_APPLICABILITY;//collations表的子集
+ *          。。。
+ *
+ *      //保护mysql的安全：
+ *      mysqld守护进程：ssl secure sockets layer 安全套接层
+ *      保护mysqld守护程序：
+ *
+ *      mysql访问权限系统：依赖于一个名为mysql的特殊数据库
+ *          基于两个一般概念：
+ *          验证：确定用户是否被允许连接数据库
+ *          授权：确定已验证用户是否有足够的权限执行查询请求
+ *
+ *      访问控制两阶段：链接验证和请求验证
  *
  *
  *
