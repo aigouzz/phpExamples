@@ -659,7 +659,10 @@ echo greet;
  *              剩余8个列max_questions,max_updates,max_connections,max_user_connections,ssl_type,ssl_cipher,x509_issuer,x509_subject;
  *          db表：针对每个数据库为用户赋予权限，可以查看用户是否没有试图执行的任务的全局权限
  *
+ *      //虚拟目录：<Directory 'd:mysql'>
+ *                  All allow,deny
  *
+ *                   </Directory>
  *
  *
  *
