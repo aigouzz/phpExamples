@@ -806,7 +806,26 @@ function bare(){
  *
  * */
 /* linux:
+解决方案1：通过端口来访问不同站点
+ * 先配置https.conf，启用httpd-vhosts.conf
+ * 配置httpd-vhosts.conf，virtual hosts
+ * hosts文件中添加ip和域名对应关系
+ * 建议注销DocumentRoot
  *
+ * 添加一个新域名与该ip绑定
+ * 开发新网站
+ * 配置httpd-vhosts.conf，添加新的virtualhost虚拟主机
+ * 在http。conf文件中，让apache监听81端口
+ * Listen 81
+ * 在hosts文件中添加新的域名
+ * 127.0.0.1 www.shunping2.com
+ * 访问要带端口
  *
+ * 通过serverName端口区分不同域名
+ * 1：开发新网站
+ * 2：在httpd-vhosts.conf文件中添加配置（注意这时的配置和以前不一样）  添加：ServerName www.shunping2.com
+ *                                                                      DirectoryIndex INDEX.HTML
+ *  VirtualHost *:80  修改
+ * 测试即可
  *
  * */

@@ -5,7 +5,7 @@
  * Date: 15/8/12
  * Time: 下午5:18
  */
-$access_token = "name";
+$name;
 
 /*<script type="text/javascript">
     // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
@@ -20,6 +20,6 @@ $access_token = "name";
     }
 </script>
  * */
+
+
 ?>
-
-
