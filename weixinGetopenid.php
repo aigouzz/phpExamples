@@ -1,8 +1,8 @@
 <?php
 	//error_log($_SERVER[REQUEST_URI]."\n\n",3,"/tmp/wm_debug.log");
 
-	$weixin_appId = 'wx7d3611a50fc55fab';
-	$weixin_appSecret = '927455e1f7fdf7348347d8d9c89726ef';
+	$weixin_appId = 'sss';
+	$weixin_appSecret = 'sss';
 	
 	list($state,$sCode) = explode('DD',$_GET['state']);
 	//error_log(var_export($_GET['state'],1)."\n\n",3,"/tmp/wm_debug.log");			
