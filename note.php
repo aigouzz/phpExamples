@@ -896,6 +896,10 @@ function bare(){
  * print_r();//var_dump();更全
  * 访问数组时，不要越界
  * 引用陷阱：不能使用未定义的常量来当做
+ * count
+ * is_array();//判断是否数组
+ * $arr = explode(‘ ’,$string);//拆分字符串成数组  以空格为界限来拆分$string
+ *
  *
  *
  * */
