@@ -899,9 +899,56 @@ function bare(){
  * count
  * is_array();//判断是否数组
  * $arr = explode(‘ ’,$string);//拆分字符串成数组  以空格为界限来拆分$string
+ * unset();允许删除数组中某个键，不会自动恢复  可以销毁某个元素也可以销毁某个变量
+ * 销毁该元素后不会自动恢复
+ * ==：相同键值对
+ * ===：相同键值对，顺序类型相同
+ * +运算符：相同键的不会改变，其他就会添加到前面数组后面   $arr + $arr1;//返回$arr和$arr 与$arr1不同键的键值对
+ *
+ * 排序：
+ * 冒泡法：比较相邻的元素，逆序即交换，一趟把最大得数拍到前面
+ * 选择排序：每次找到最小排到前面
+ * 插入排序：
+ * 快速排序：
+ * 冒泡 快速都是交换式排序法 也是内部排序
+ * 数组默认传递值，不是地址
+ *
  *
  *
  *
  * */
 
+//封装函数
 
+function bubble(&$arr){//封装 加地址符会使得$arr指向传进来的数组地址
+    $temp=0;
+    for($i=0;$i<count($arr)-1;$i++){
+        for($j=0;$j<count($arr)-1-$i;$j++){
+            if($arr[$j]>$arr[$j+1]){
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j+1];
+                $arr[$j+1] = $temp;
+            }
+        }
+    }
+}
+function selectSort(&$arr){
+    $temp = 0;
+    for($i=0;$i<count($arr)-1;$i++){
+        $minVal = $arr[$i];
+        $minIndex = $i;
+        for($j=$i+1;$j<count($arr)-1;$j++){
+            if($minVal>$arr[$j]){
+                $minVal = $arr[$j];
+                $minIndex = $j;
+            }
+        }
+        $temp = $arr[$i];
+        $arr[$i] = $arr[$minIndex];
+        $arr[$minIndex] = $temp;
+    }
+}//比冒泡排序更有效率
+
+function Sort(&$arr){
+
+}
