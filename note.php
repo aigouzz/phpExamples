@@ -988,7 +988,7 @@ function fastSort($left,$right,&$arr){//快速排序法
 /*查找：
     顺序查找：按照顺序一个一个的比较找到要的数据
  * 二分查找:前提，数组是有序的   必须先排序在查找
- *
+ *         首先找到数组中间数，与查找数比较，若查找数大，则向后找，否则向前找，相等则已经找到
  * */
 
 function search(&$arr,$findVal){
@@ -1003,4 +1003,28 @@ function search(&$arr,$findVal){
         echo -1;
     }
 }
+
+function binarySearch(&$arr,$findVal,$left,$right){
+
+    if($left>$right){
+        return;
+    }
+
+    $midIndex = round(($left + $right)/2);
+    if($arr[$midIndex] > $findVal){
+        binarySearch($arr,$findVal,$left,$midIndex -1);
+    }else if($arr[$midIndex] < $findVal){
+        binarySearch($arr,$findVal,$midIndex+1,$right);
+    }else{
+        return $midIndex;
+    }
+}
+
+
+
+
+
+
+
+
 
