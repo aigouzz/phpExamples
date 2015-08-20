@@ -6,7 +6,8 @@
  * Time: 下午4:28
  */
 $pic = $_POST['picture'];
-var_dump($pic);
+$pi = $_GET['a'];
+var_dump($pi);
 /*if(is_uploaded_file($_FILES['picture']['tmp_name'])){
     $pic1 = $_FILES['picture']['name'];
 
