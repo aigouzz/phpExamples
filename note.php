@@ -908,8 +908,8 @@ function bare(){
  * 排序：
  * 冒泡法：比较相邻的元素，逆序即交换，一趟把最大得数拍到前面
  * 选择排序：每次找到最小排到前面
- * 插入排序：
- * 快速排序：
+ * 插入排序：属于内部排序法，有序表和无序表，从无序表中得到元素和有序表对比，排列到合适位置
+ * 快速排序：二分法
  * 冒泡 快速都是交换式排序法 也是内部排序
  * 数组默认传递值，不是地址
  *
@@ -947,8 +947,60 @@ function selectSort(&$arr){
         $arr[$i] = $arr[$minIndex];
         $arr[$minIndex] = $temp;
     }
-}//比冒泡排序更有效率
+}//比冒泡排序更有效率    选择排序
 
-function Sort(&$arr){
-
+function insertSort(&$arr){
+    for($i=1;$i<count($arr);$i++){
+        $insertVal = $arr[$i];
+        $insertIndex = $i - 1;
+        while($insertIndex>=0 && $insertVal < $arr[$insertIndex]){
+            $arr[$insertIndex + 1] = $arr[$insertIndex];//移动一位
+            $insertIndex--;
+        }
+        $arr[$insertIndex + 1] = $insertVal;
+    }
 }
+
+function fastSort($left,$right,&$arr){//快速排序法
+    $l = $left;
+    $r = $right;
+    $pivot = $arr[($left + $right)/2];
+    $temp = 0;
+    while($l<$r){
+        while($arr[$l]<$pivot)$l++;
+        while($arr[$r]>$pivot)$r--;
+        if($l>=$r)break;
+        $temp = $arr[$l];
+        $arr[$l] = $arr[$r];
+        $arr[$r] = $temp;
+
+        if($arr[$l] == $pivot)--$r;
+        if($arr[$r] == $pivot)++$l;
+
+    }
+    if($l == $r){
+        $l++;
+        $r--;
+    }
+    if($left < $r)fastSort($left,$r,$arr);
+    if($right > $l)fastSort($l,$right,$arr);
+}
+/*查找：
+    顺序查找：按照顺序一个一个的比较找到要的数据
+ * 二分查找:前提，数组是有序的   必须先排序在查找
+ *
+ * */
+
+function search(&$arr,$findVal){
+    $off = true;
+    for($i=0;$i<count($arr);$i++){
+        if($findVal == $arr[$i]){
+            echo $i;
+            $off = false;
+        }
+    }
+    if($off){
+        echo -1;
+    }
+}
+
