@@ -400,7 +400,7 @@
 
         wx.onMenuShareTimeline({
             title: '我人生的三张牌居然是......，快来为我破解',
-            link: '<?php echo $shareUrl;?>',
+            link: 'v ',
             imgUrl: '<?php echo $headImg;?>',
             trigger: function (res) {
             //    alert('用户点击分享到朋友圈');
