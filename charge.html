@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机充值</title>
+    <style>
+        body{margin:0;padding:0;}
+        input{outline: none;}
+        .clear{zoom:1;}
+        .clear:after{content: '';clear:both;height:0;visibility: hidden;display: block;}
+        #wrap{width:660px;background: #e48b17;height:452px;margin:0 auto;}
+        .title{width:100%;height:40px;line-height: 40px;font-size: 38px;padding-top:57px;text-align: center;color: #fff;}
+        .second{width:100%;height:40px;line-height: 40px;font-size: 38px;margin-top:16px;text-align: center;color: #ebfe04;}
+        .form{width:100%;height:228px;display: block;margin-top:35px;}
+        .phone{width:100%;height:58px;}
+        .left{margin-left:92px;line-height: 58px;width:108px;float:left;color:#fff;}
+        .inp1{display: block;float: left;width:360px;height:52px;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
+            line-height: 52px;text-indent: 8px;color:#949494;font-size: 20px;}
+        .check{width:100%;height:58px;margin-top:24px;}
+        .inp2{display: block;float: left;width:177px;height:52px;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
+            line-height: 52px;text-indent: 8px;color:#949494;font-size: 20px;}
+        .send{width:127px;height:49px;float: left;margin:3px 0 0 42px;background: #69a108;border:1px solid #4f8a16;line-height: 49px;color:#fff;text-align: center;
+            border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;cursor: pointer;}
+        .ensure{margin:20px 0 0 184px;width:287px;height:61px;border:2px solid #498e0d;border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius:10px;
+        text-align: center;line-height: 61px;background: #7db724;color: #fff;cursor: pointer;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="title">8元即可获得超值礼包</div>
+    <div class="second">包含80000金币+随机礼品</div>
+    <form class="form">
+        <div class="phone clear">
+            <div class="left">手机号：</div>
+            <input type="text" class="inp1" placeholder="请输入正确的十一位手机号码" />
+        </div>
+        <div class="check clear">
+            <div class="left">验证码：</div>
+            <input type="text" class="inp2" placeholder="请输入6位验证码" />
+            <div class="send">立即发送</div>
+        </div>
+        <div class="ensure">确认话费支付</div>
+    </form>
+</div>
+</body>
+</html>
