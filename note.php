@@ -1022,9 +1022,3 @@ function binarySearch(&$arr,$findVal,$left,$right){
 
 
 
-
-
-
-
-
-
