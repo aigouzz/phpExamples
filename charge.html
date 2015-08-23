@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>手机充值</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth/10 + 'px';
+    </script>
     <style>
         body{margin:0;padding:0;}
         input{outline: none;}
         .clear{zoom:1;}
         .clear:after{content: '';clear:both;height:0;visibility: hidden;display: block;}
-        #wrap{width:660px;background: #e48b17;height:452px;margin:0 auto;}
-        .title{width:100%;height:40px;line-height: 40px;font-size: 38px;padding-top:57px;text-align: center;color: #fff;}
-        .second{width:100%;height:40px;line-height: 40px;font-size: 38px;margin-top:16px;text-align: center;color: #ebfe04;}
-        .form{width:100%;height:228px;display: block;margin-top:35px;}
-        .phone{width:100%;height:58px;}
-        .left{margin-left:92px;line-height: 58px;width:108px;float:left;color:#fff;}
-        .inp1{display: block;float: left;width:360px;height:52px;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
-            line-height: 52px;text-indent: 8px;color:#949494;font-size: 20px;}
-        .check{width:100%;height:58px;margin-top:24px;}
-        .inp2{display: block;float: left;width:177px;height:52px;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
-            line-height: 52px;text-indent: 8px;color:#949494;font-size: 20px;}
-        .send{width:127px;height:49px;float: left;margin:3px 0 0 42px;background: #69a108;border:1px solid #4f8a16;line-height: 49px;color:#fff;text-align: center;
-            border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;cursor: pointer;}
-        .ensure{margin:20px 0 0 184px;width:287px;height:61px;border:2px solid #498e0d;border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius:10px;
-        text-align: center;line-height: 61px;background: #7db724;color: #fff;cursor: pointer;}
+        #wrap{width:10rem;background: #e48b17;height:7.05rem;margin:0 auto;}
+        .title{width:100%;height:0.88rem;line-height: 0.619rem;font-size: 0.58rem;padding-top:0.6rem;text-align: center;color: #fff;}
+        .second{width:100%;height:0.88rem;line-height: 0.62rem;font-size: 0.58rem;margin-top:0.2rem;text-align: center;color: #ebfe04;}
+        .form{width:100%;height:3.557rem;display: block;margin-top:0.4rem;}
+        .phone{width:100%;height:0.9rem;}
+        .left{margin-left:1.437rem;line-height: 0.907rem;width:1.687rem;float:left;color:#fff;font-size: 0.3rem;}
+        .inp1{display: block;float: left;width:5.625rem;height:0.808rem;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
+            line-height: 0.808rem;text-indent: 8px;color:#949494;font-size: 0.31rem;}
+        .check{width:100%;height:0.907rem;margin-top:0.35rem;font-size: 0.3rem;}
+        .inp2{display: block;float: left;width:2.74rem;height:0.808rem;border:2px solid #868686;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;
+            line-height: 0.808rem;text-indent: 8px;color:#949494;font-size: 0.312rem;}
+        .send{width:1.97rem;height:0.76rem;float: left;margin:3px 0 0 0.656rem;background: #69a108;border:1px solid #4f8a16;line-height: 0.76rem;color:#fff;text-align: center;
+            border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;cursor: pointer;font-size: 0.3rem;}
+        .ensure{margin:0.31rem 0 0 2.87rem;width:4.49rem;height:0.95rem;border:2px solid #498e0d;border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius:10px;
+        text-align: center;line-height: 0.95rem;background: #7db724;color: #fff;cursor: pointer;font-size: 0.5rem;}
     </style>
 </head>
 <body>
@@ -42,5 +45,8 @@
         <div class="ensure">确认话费支付</div>
     </form>
 </div>
+<script>
+    alert(document.getElementsByTagName('html')[0].style.fontSize);
+</script>
 </body>
 </html>
