@@ -11,8 +11,15 @@
  * 成员属性和成员方法
  *
  */
+public class cat{
+    public $name;
+    public $age;
+    public $color;
+
+}
 
 /*c语言：指向指针的指针
  * *a = &b;//指针，地址
+ *
  *
  * */
