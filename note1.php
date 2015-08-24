@@ -21,7 +21,7 @@
  *
  *
  */
-public class Cat{
+class Cat{
     public $name;
     public $age;
     public $color;
