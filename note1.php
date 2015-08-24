@@ -40,6 +40,21 @@ $p1->weight = 180;
 $p1->age = 26;
 
 
+$p2 = $p1;
+$p2->age = 15;
+
+echo $p1->name;//也是15
+class Ninga{
+    public $age = 'dave';
+    private static $name='apple';
+    public function getName(){
+        return $this->age;
+    }
+    public function setName($a){
+        $this->name = $a;
+    }
+}
+
 /*c语言：指向指针的指针
  * *a = &b;//指针，地址
  *
