@@ -19,7 +19,7 @@
  * 函数接收基本数据类型，传递值
  * php中给一个函数传递数组，默认情况下传值（拷贝新数组），若希望传值，则&$arr;这样传即可
  * 成员方法：功能，行为  函数写到类中
- *
+ * 调用成员方法和pt函数一样
  *
  */
 class Cat{
@@ -55,7 +55,17 @@ class Ninga{
         $this->name = $a;
     }
 }
-
+class Person1{
+    public $name;
+    public function speak(){
+        echo '说话';
+    }
+    public function get(){
+        echo $this->name;
+    }
+}
+$p1 = new Person1();
+$p1->speak();
 /*c语言：指向指针的指针
  * *a = &b;//指针，地址
  *
