@@ -24,9 +24,20 @@
  * 区分不同请求：通常使用hidden
  * 构造方法：完成对新对象的初始化
  *     没有返回值   创建一个类的新对象，会自动调用该类的构造方法完成对对象的初始化
- * function __constructor(){}
+ * function __construct(){}
  * 两个
- * 建议使用__constructor构造方法形式，优先调用__constructor
+ * 建议使用__construct构造方法形式，优先调用__construct
+ * this代表当前对象
+ * 默认构造方法会被自定义的构造方法覆盖，不能重复定义构造方法
+ * 默认修饰词是public，如果有参数，则创建新对象时要传入参数，否则报错
+ *
+ * 析构函数：会在到对象的所有引用都被销毁或者
+ * 作用：释放资源（释放数据库连接，图片，销毁对象等）
+ * 1：会自动调用 2：主要用于销毁资源，回收资源  3：
+ * function __destruct(){}
+ *
+ *
+ *
  *
  *
  */
@@ -71,9 +82,13 @@ class Person1{
     public function get(){
         echo $this->name;
     }
+    function __construct($iname){
+        $this->name = $iname;
+}
 }
 $p1 = new Person1();
 $p1->speak();
+
 /*c语言：指向指针的指针
  * *a = &b;//指针，地址
  *
