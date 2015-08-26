@@ -7,7 +7,7 @@
  */
 $address = "http://doudizhu.tuyoo.com";
 $content = file_get_contents($address);
-preg_match("/(<ul\sid=\"lfUl\">(\s*<li>\s*<a\s*href[\s\S]*<\/a>\s*<\/li>\s*){5}<\/ul>)/i",$content,$game);
+preg_match("/(<ul\sid=\"lfUl\">(\s*<li>\s*<a[\s\S]*<\/a>\s*<\/li>\s*){5}<\/ul>)/i",$content,$game);
 preg_match("/(<ul[\s\S]*>)/i",$content,$ul);
 var_dump($game);
 //var_dump($ul[0]);
