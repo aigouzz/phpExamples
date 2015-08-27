@@ -5,7 +5,7 @@ var report = require('gulp');
 var uglify = require('gulp-uglify');
 
 gulp.task('default', function () {
-    gulp.src('t.php')
+    gulp.src('where.php')
         .pipe(uglify)
         .pipe(gulp.dest('/'));
 });
