@@ -40,6 +40,7 @@
  *
  *
  *
+ *
  */
 class Cat{
     public $name;
@@ -98,8 +99,36 @@ $p1->speak();
 /*数据挖掘：
  * 分类：原本有类标号，将新的事务添加到类中
  * 聚类：没有类编号，通过分析特征或者属性将事务进行分类
+ * 回归：分析事务得到连续型数据模型，通常用于预测
+ *
+ *
  *
  *
  *
  * */
-
+class ContentGet{
+    private $name;
+    private $age;
+    private $data;
+    function __construct($name,$age,$data){
+        $this->name = $name;
+        $this->age  = $age;
+        $this->data  = $data;
+    }
+    function getData(){
+        return $this->data;
+    }
+    function setData($data){
+        $this->data = $data;
+    }
+    function doGet(){
+        if($this->data > 500){
+            $this->setData(200);
+        }else{
+            $this->data += 100;
+        }
+    }
+}
+$g = new ContentGet('aimi',21,100);
+$g->doGet();
+echo $g->getData();
